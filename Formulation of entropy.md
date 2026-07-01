@@ -11,7 +11,28 @@ I(X)=\log_2 (\frac{1}{\mathbb{P}(X)})=-\log_2 \mathbb{P}(X)
 ```
 Now, the two following questions naturally arise:
 1. What is the role of $log_2$?
-2. Why is $\mathbb{P}(X)$ used?
-
+2. Why is $\frac{1}{\mathbb{P}(X)}$ used?
 Let's see the answers
-### Role of $log_2$?
+### Role of $log_2$
+In information theory, the next principle is fundamental for establishing the formulation of the amount of the information:
+The information content of independent events is additive; that is, the information obtained from two independent events occurring together is equal to the sum of the information provided by each event individually.
+Notice that the logarithmic function transforms products into sums:
+```math
+\log(ab) = \log(a) + \log(b)
+```
+Which is consistent with the additive property of information for independent events.
+Additionally, computers store information using bits. Therefore, the base two in the logarithm reflects the fact that a bit has two possible states and measures information in units of bits. For this reason, the amount of information is commonly measured using the logarithm base two.
+### Role of $\frac{1}{\mathbb{P}(X)}$
+Another fundamental principle of information theory that explains the use of the term $\frac{1}{\mathbb{P}(X)}$ is the following:
+The lower the probability of an event, the greater the amount of information it conveys when it occurs.
+Consequently, an event with a high probability of occurring provides little information because its occurrence is expected. In contrast, an event with a low probability of occurring provides a large amount of information because its occurrence is surprising.
+The quantity
+```math
+\log_2\left(\frac{1}{\mathbb{P}(X)}\right)
+```
+captures this behavior naturally. If $\mathbb{P}(X)$ is large, then the amount of information is small. On the other hand, if $\mathbb{P}(X)$ is small, then $\frac{1}{\mathbb{P}(X)}$ becomes large, and consequently the amount of information increases.
+## Definition of the entropy
+We can define information entropy as the expected value of the amount of information of the event X. Then
+```math
+H(X)=\mathbb{E}[I(X)]=- \sum_{i=1}^{n} \mathbb{P}(X=i) I(X)= - \sum_{i=1}^{n} \mathbb{P}(X=i) \log_2 \mathbb{P}(X=i)
+```
