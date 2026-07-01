@@ -26,13 +26,16 @@ Additionally, computers store information using bits. Therefore, the base two in
 Another fundamental principle of information theory that explains the use of the term $\frac{1}{\mathbb{P}(X)}$ is the following:
 The lower the probability of an event, the greater the amount of information it conveys when it occurs.
 Consequently, an event with a high probability of occurring provides little information because its occurrence is expected. In contrast, an event with a low probability of occurring provides a large amount of information because its occurrence is surprising.
-The quantity
+So, we have the next equation
 ```math
 \log_2\left(\frac{1}{\mathbb{P}(X)}\right)
 ```
-captures this behavior naturally. If $\mathbb{P}(X)$ is large, then the amount of information is small. On the other hand, if $\mathbb{P}(X)$ is small, then $\frac{1}{\mathbb{P}(X)}$ becomes large, and consequently the amount of information increases.
+If $\mathbb{P}(X)$ is large, then the amount of information is small. On the other hand, if $\mathbb{P}(X)$ is small, then $\frac{1}{\mathbb{P}(X)}$ becomes large.
 ## Definition of the entropy
-We can define information entropy as the expected value of the amount of information of the event X. Then
+we can now define the information content of an entire random variable.
+Since a random variable may produce different outcomes with different probabilities, the amount of information obtained is itself a random quantity. Therefore, a natural measure of the uncertainty associated with the random variable is the expected amount of information produced by its outcomes.
+This expected information is called the entropy of the random variable X and is defined as
 ```math
 H(X)=\mathbb{E}[I(X)]=- \sum_{i=1}^{n} \mathbb{P}(X=i) I(X)= - \sum_{i=1}^{n} \mathbb{P}(X=i) \log_2 \mathbb{P}(X=i)
 ```
+Hence, entropy measures the average amount of information associated with the outcomes of the random variable X.
