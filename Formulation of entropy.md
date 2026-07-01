@@ -12,6 +12,7 @@ I(X)=\log_2 (\frac{1}{\mathbb{P}(X)})=-\log_2 \mathbb{P}(X)
 Now, the two following questions naturally arise:
 1. What is the role of $log_2$?
 2. Why is $\frac{1}{\mathbb{P}(X)}$ used?
+
 Let's see the answers
 ### Role of $log_2$
 In information theory, the next principle is fundamental for establishing the formulation of the amount of the information:
