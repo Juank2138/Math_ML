@@ -12,5 +12,6 @@ I(X)=\log_2 (\frac{1}{\mathbb{P}(X)})=-\log_2 \mathbb{P}(X)
 Now, the two following questions naturally arise:
 1. What is the role of $log_2$?
 2. Why is $\mathbb{P}(X)$ used?
+
 Let's see the answers
-### What is the role of $log_2$?
+### Role of $log_2$?
