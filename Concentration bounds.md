@@ -9,7 +9,7 @@ In addition, if we have a constant $\alpha > 0$. Then
 ```math
 \mathbb{E}[X]=\int_{0}^{\infty} Xf_{X}(X) dX >= \int_{\alpha}^{\infty} Xf_{X}(X) dX
 ```
-We observe that if we fix X as X>=$\alpha$, then we always get the following inequality
+We observe that if we fix X as $X>=\alpha$, then we always get the following inequality
 ```math
 \mathbb{E}[X] >= \int_{\alpha}^{\infty} \alpha f_{X}(X) dX
 ```
