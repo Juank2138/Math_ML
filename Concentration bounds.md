@@ -7,7 +7,7 @@ Let $X$ a continuos random variable and we know that its expected value is defin
 ```
 In addition, if we have a constant $\alpha > 0$. Then
 ```math
-\mathbb{E}[X]=\int_{0}^{\infty} Xf_{X}(X) dX >= \int_{\alpha}^{\infty} Xf_{X}(X) dX
+\mathbb{E}[X]=\int_{0}^{\infty} Xf_{X}(X) dX ≥ \int_{\alpha}^{\infty} Xf_{X}(X) dX
 ```
 We observe that if we fix $X$ as $X>=\alpha$, then we always get the following inequality
 ```math
