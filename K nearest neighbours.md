@@ -21,9 +21,9 @@ H=\{h_{D} | h_{D}=mode\{y_{i} | x_{i} \in N_{k}(x)\}\}
 ### Regression
 Let us look at the form of a hypothesis for this type of problem. So, we have
 ```math
-h_{D}=
+h_{D}=\frac{1}{k} \sum_{x_{i} \in N_{k}(x)} y_{i}
 ```
 Then, the set of hypotheses takes the form
 ```math
-H=\{h_{D} | h_{D}=\}
+H=\{h_{D} | h_{D}=\frac{1}{k} \sum_{x_{i} \in N_{k}(x)} y_{i}\}
 ```
