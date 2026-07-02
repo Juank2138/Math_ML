@@ -35,7 +35,7 @@ We can divide the algorithm's construction into two parts:
 * A distance metric must be established to provide a standard measurement for all data
 * all training data must be stored
 
-2.prediction phase
+2. Prediction phase
 * The distance between the new data point and all previously stored data points is calculated
 * the k nearest data points are selected
 * The new data point is classified; if it is a classification problem, the majority class is chosen, whereas if it is a regression problem, the average of the neighbors' values ​​is calculated
