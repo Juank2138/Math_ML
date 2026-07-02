@@ -40,165 +40,57 @@ We define the variance of a continuos random variable as $Var[X]=\mathbb{E}[(X-\
 \mathbb{P}(|(X-\mathbb{E}[X])|≥\alpha) ≤ \frac{Var[X]}{\alpha^{2}}
 ```
 ## Hoeffding's inequality
-Let $(X_1, X_2, \dots, X_n)$ be independent random variables satisfying $a_i \leq X_i \leq b_i$,
+Let $(X_1, X_2, \dots, X_n)$ be independent random variables satisfying $a_i ≤ X_i ≤ b_i$,
 and define 
 ```math
-\mu_i = \mathbb{E}[X_i].
+\mu_i = \mathbb{E}[X_i]
 ```
 Our goal is to bound the probability
 ```math
-\mathbb{P}\left(\sum_{i=1}^{n}(X_i-\mu_i) ≥ t\right).
+\mathbb{P}\left(\sum_{i=1}^{n}(X_i-\mu_i) ≥ t\right)
 ```
-For any (\lambda > 0)
+For any $\lambda > 0$
 ```math
-\mathbb{P}\left(\sum_{i=1}^{n}(X_i-\mu_i)≥ t\right)=\mathbb{P}\left(e^{\lambda\sum_{i=1}^{n}(X_i-\mu_i)}≥ e^{\lambda t}\right).
+\mathbb{P}\left(\sum_{i=1}^{n}(X_i-\mu_i)≥ t\right)=\mathbb{P}\left(e^{\lambda\sum_{i=1}^{n}(X_i-\mu_i)}≥ e^{\lambda t}\right)
 ```
 Applying Markov's inequality to the exponential yields
 ```math
-\mathbb{P}\left(\sum_{i=1}^{n}(X_i-\mu_i)≥ t\right)≤e^{-\lambda t}\mathbb{E}[e^{\lambda\sum_{i=1}^{n}(X_i-\mu_i)}]
+\mathbb{P}\left(\sum_{i=1}^{n}(X_i-\mu_i)≥ t\right)≤e^{-\lambda t}\mathbb{E}\left[e^{\lambda\sum_{i=1}^{n}(X_i-\mu_i)}\right]
 ```
-Step 2: Use independence
-
 Since the random variables are independent,
-
-\mathbb{E}\left[
-e^{\lambda\sum_{i=1}^{n}(X_i-\mu_i)}
-\right]
-=
-\prod_{i=1}^{n}
-\mathbb{E}\left[
-e^{\lambda(X_i-\mu_i)}
-\right].
-
+```math
+\mathbb{E}\left[e^{\lambda\sum_{i=1}^{n}(X_i-\mu_i)}\right]=\prod_{i=1}^{n}\mathbb{E}\left[e^{\lambda(X_i-\mu_i)}\right]
+```
 Hence,
-
-\mathbb{P}\left(\sum_{i=1}^{n}(X_i-\mu_i)\geq t\right)
-\leq
-e^{-\lambda t}
-\prod_{i=1}^{n}
-\mathbb{E}\left[
-e^{\lambda(X_i-\mu_i)}
-\right].
-Step 3: Apply Hoeffding's lemma
-
-Hoeffding's lemma states that if a random variable (X) satisfies
-
-a \leq X \leq b,
-
-then
-
-\mathbb{E}\left[e^{\lambda(X-\mathbb{E}[X])}\right]
-\leq
-\exp\left(
-\frac{\lambda^2(b-a)^2}{8}
-\right).
-
+```math
+\mathbb{P}\left(\sum_{i=1}^{n}(X_i-\mu_i)≥ t\right)≤e^{-\lambda t}\prod_{i=1}^{n}\mathbb{E}\left[e^{\lambda(X_i-\mu_i)}\right]
+```
+Hoeffding's lemma states that if a random variable $(X)$ satisfies $a ≤ X ≤ b$, then
+```math
+\mathbb{E}\left[e^{\lambda(X-\mathbb{E}[X])}\right]≤\exp\left(\frac{\lambda^2(b-a)^2}{8}\right)
+```
 Applying the lemma to each (X_i),
-
-\mathbb{E}\left[
-e^{\lambda(X_i-\mu_i)}
-\right]
-\leq
-\exp\left(
-\frac{\lambda^2(b_i-a_i)^2}{8}
-\right).
-
+```math
+\mathbb{E}\left[e^{\lambda(X_i-\mu_i)}\right]≤\exp\left(\frac{\lambda^2(b_i-a_i)^2}{8}\right)
+```
 Therefore,
-
-\prod_{i=1}^{n}
-\mathbb{E}\left[
-e^{\lambda(X_i-\mu_i)}
-\right]
-\leq
-\exp\left(
-\frac{\lambda^2}{8}
-\sum_{i=1}^{n}(b_i-a_i)^2
-\right).
-
+```math
+\prod_{i=1}^{n}\mathbb{E}\left[e^{\lambda(X_i-\mu_i)}\right]≤\exp\left(\frac{\lambda^2}{8}\sum_{i=1}^{n}(b_i-a_i)^2\right)
+```
 Substituting into the previous inequality gives
-
-\mathbb{P}\left(\sum_{i=1}^{n}(X_i-\mu_i)\geq t\right)
-\leq
-\exp\left(
--\lambda t
-+
-\frac{\lambda^2}{8}
-\sum_{i=1}^{n}(b_i-a_i)^2
-\right).
-Step 4: Optimize with respect to (\lambda)
-
-Define
-
-S = \sum_{i=1}^{n}(b_i-a_i)^2.
-
-We minimize the exponent
-
-f(\lambda)
-=
--\lambda t
-+
-\frac{\lambda^2 S}{8}.
-
-Differentiating with respect to (\lambda),
-
-f'(\lambda)
-=
--t
-+
-\frac{\lambda S}{4}.
-
-Setting the derivative equal to zero,
-
-\lambda^\star
-=
-\frac{4t}{S}.
-
-Substituting this value into the exponent,
-
-f(\lambda^\star)
-=
--\frac{2t^2}{S}.
-
-Therefore,
-
-\mathbb{P}\left(
-\sum_{i=1}^{n}(X_i-\mu_i)
-\geq t
-\right)
-\leq
-\exp\left(
--\frac{2t^2}
-{\sum_{i=1}^{n}(b_i-a_i)^2}
-\right).
-
+```math
+\mathbb{P}\left(\sum_{i=1}^{n}(X_i-\mu_i)≥ t\right)≤\exp\left(-\lambda t+\frac{\lambda^2}{8}\sum_{i=1}^{n}(b_i-a_i)^2\right)
+```
+Now, we have to optimize with respect to $\lambda$. Therefore,
+```math
+\mathbb{P}\left(\sum_{i=1}^{n}(X_i-\mu_i)≥ t\right)≤\exp\left(-\frac{2t^2}{\sum_{i=1}^{n}(b_i-a_i)^2}\right)
+```
 This is the one-sided version of Hoeffding's inequality.
-
-Two-sided Hoeffding inequality
-
-Applying the same argument to (-X_i) gives
-
-\mathbb{P}\left(
-\sum_{i=1}^{n}(X_i-\mu_i)
-\leq -t
-\right)
-\leq
-\exp\left(
--\frac{2t^2}
-{\sum_{i=1}^{n}(b_i-a_i)^2}
-\right).
-
+To obtain the two-sided Hoeffding inequality, we have to apply the same argument to $(-X_i)$ gives
+```math
+\mathbb{P}\left(\sum_{i=1}^{n}(X_i-\mu_i)≤ -t\right)≤\exp\left(-\frac{2t^2}{\sum_{i=1}^{n}(b_i-a_i)^2}\right)
+```
 Using the union bound, we obtain
-
-\mathbb{P}\left(
-\left|
-\sum_{i=1}^{n}(X_i-\mu_i)
-\right|
-\geq t
-\right)
-\leq
-2\exp\left(
--\frac{2t^2}
-{\sum_{i=1}^{n}(b_i-a_i)^2}
-\right).
-
+```math
+\mathbb{P}\left(\left|\sum_{i=1}^{n}(X_i-\mu_i)\right|≥ t\right)≤2\exp\left(-\frac{2t^2}{\sum_{i=1}^{n}(b_i-a_i)^2}\right)
 which is the classical two-sided Hoeffding inequality.
