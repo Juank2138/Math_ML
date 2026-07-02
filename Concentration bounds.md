@@ -69,7 +69,7 @@ Hoeffding's lemma states that if a random variable $(X)$ satisfies $a ≤ X ≤ 
 ```math
 \mathbb{E}\left[e^{\lambda(X-\mathbb{E}[X])}\right]≤\exp\left(\frac{\lambda^2(b-a)^2}{8}\right)
 ```
-Applying the lemma to each (X_i),
+Applying the lemma to each $(X_i)$,
 ```math
 \mathbb{E}\left[e^{\lambda(X_i-\mu_i)}\right]≤\exp\left(\frac{\lambda^2(b_i-a_i)^2}{8}\right)
 ```
@@ -93,4 +93,5 @@ To obtain the two-sided Hoeffding inequality, we have to apply the same argument
 Using the union bound, we obtain
 ```math
 \mathbb{P}\left(\left|\sum_{i=1}^{n}(X_i-\mu_i)\right|≥ t\right)≤2\exp\left(-\frac{2t^2}{\sum_{i=1}^{n}(b_i-a_i)^2}\right)
+```
 which is the classical two-sided Hoeffding inequality.
