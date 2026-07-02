@@ -45,10 +45,12 @@ In other case, if we have 5 points distributed as follows
 </p>
 We have cases where the points are separated by hyperplanes, such as
 <p align="center">
-  <img width="50%" alt="puntos5_sep1" src="https://github.com/user-attachments/assets/3a232777-902d-43c8-9b76-8418a79b64ff" />
-  <img width="50%" alt="puntos5_sep2" src="https://github.com/user-attachments/assets/42cdd7c5-6e0b-41c0-a475-262a697bd760" />
+  <img width="330" height="292" alt="puntos5_sep1" src="https://github.com/user-attachments/assets/3a232777-902d-43c8-9b76-8418a79b64ff" />
+  <img width="330" height="292" alt="puntos5_sep2" src="https://github.com/user-attachments/assets/42cdd7c5-6e0b-41c0-a475-262a697bd760" />
 </p>
-We know that there can be at most $2^{5} = 32$ effective separating lines for the 5 points, but there are cases where the points cannot have certain labels, such as in the following instance
+
+We know that there can be at most $2^5=32$ effective separating lines for the 5 points, but there are cases where the points cannot have certain labels, such as in the following instance
+
 <p align="center">
   <img width="373" height="327" alt="puntos5fnl" src="https://github.com/user-attachments/assets/62b22fac-a2a9-4a30-a65c-18985a41f3a7" />
 </p>
