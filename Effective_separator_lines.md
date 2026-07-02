@@ -11,6 +11,7 @@ then there are four effective binary separating lines, as shown below.
   <img width="22%" alt="puntos2_sep5" src="https://github.com/user-attachments/assets/988dcc0b-3e80-477d-808e-fb826f102e47" />
 </p>
 Notice that circles and squares represent different labels, while dashed lines represent hyperplanes that classify the data.
+
 ## General Form of a Hyperplane
 In $\mathbb{R}^2$, a separating hyperplane can be written as
 ```math
