@@ -6,6 +6,6 @@ Let X a continuos random variable and we know that its expected value is defined
 \mathbb{E}[X]=\int_{0}^{\infty} Xf_{X}(X) dX
 ```
 In addition, if we have a constant $\alpha > 0$. Then
-```
-\mathbb{E}[X]=\int_{0}^{\infty} Xf_{X}(X) dX >= \int_{\alpha}^{\infty} Xf_{X}(X) dX
+```math
+\mathbb{E}[X]=\int_{0}^{\infty} Xf_{X}(X) dX \gcd \int_{\alpha}^{\infty} Xf_{X}(X) dX
 ```
