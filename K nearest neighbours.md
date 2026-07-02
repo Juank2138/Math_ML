@@ -39,4 +39,5 @@ We can divide the algorithm's construction into two parts:
 * The distance between the new data point and all previously stored data points is calculated
 * the k nearest data points are selected
 * The new data point is classified; if it is a classification problem, the majority class is chosen, whereas if it is a regression problem, the average of the neighbors' values ​​is calculated
+
 Finally, we get a good explanation of the most basic instance-based algorithm.
