@@ -1,7 +1,7 @@
 # KNN
 We know that this learning algorithm is instance-based; that is, it does not build a model from the data but instead stores all the data in order to compare the existing information with new information. 
 Let us look at how the hypothesis set and the learning algorithm are defined.
-## hypothesis set
+## Hypothesis set
 This set includes all the functions that assign a label to each data point based on the $k$ training samples closest to the point being labeled, using a distance metric.
 We have two distinct approaches for the two types of problems we may encounter.
 ### Classification
@@ -25,5 +25,16 @@ h_{D}=\frac{1}{k} \sum_{x_{i} \in N_{k}(x)} y_{i}
 ```
 Then, the set of hypotheses takes the form
 ```math
-H=\left\{h_{D} | h_{D}=\frac{1}{k} \sum_{x_{i} \in N_{k}(x)} y_{i}\right\}
+H=\{h_{D} | h_{D}=\frac{1}{k} \sum_{x_{i} \in N_{k}(x)} y_{i}\}
 ```
+## Learning algorithm
+We can divide the algorithm's construction into two parts:
+1. Training phase
+* The number of k-neighbors must be determined
+* A distance metric must be established to provide a standard measurement for all data
+* all training data must be stored
+
+2.prediction phase
+* The distance between the new data point and all previously stored data points is calculated
+* the k nearest data points are selected
+* The new data point is classified; if it is a classification problem, the majority class is chosen, whereas if it is a regression problem, the average of the neighbors' values ​​is calculated
