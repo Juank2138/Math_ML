@@ -25,5 +25,5 @@ h_{D}=\frac{1}{k} \sum_{x_{i} \in N_{k}(x)} y_{i}
 ```
 Then, the set of hypotheses takes the form
 ```math
-H=\{h_{D} | h_{D}=\frac{1}{k} \sum_{x_{i} \in N_{k}(x)} y_{i}\}
+H=\left\{h_{D} | h_{D}=\frac{1}{k} \sum_{x_{i} \in N_{k}(x)} y_{i}\right\}
 ```
