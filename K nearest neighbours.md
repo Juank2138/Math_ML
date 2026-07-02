@@ -13,6 +13,7 @@ where
 * $D$:=set of the training data
 * $N_{k}(x)$:=set of the $k$ nearest neighbours to x
 * $mode$:=classifies the data using the most frequent labels among its neighbors
+
 Then, hypothesis set for classification problems is:
 ```math
 H=\{h_{D} | h_{D}=mode\{y_{i} | x_{i} \in N_{k}(x)\}\}
