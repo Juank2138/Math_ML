@@ -33,7 +33,7 @@ The ReLU returns zero for negative inputs and behaves as the identity function f
 The origin of the junctions is the transition point of each hidden neuron between its inactive and active states. A hidden neuron changes behavior when its pre-activation becomes zero:
 ```math
 \theta_{i0}+\theta_{i1}x=0
-'''
+```
 Solving for $x$ gives the location of the junction:
 ```math
 x_i=-\frac{\theta_{i0}}{\theta_{i1}}
