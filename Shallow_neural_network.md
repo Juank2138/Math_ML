@@ -13,8 +13,8 @@ For the one-dimensional example shown in Section 3.1, the network is defined as
 
 where:
 
-- $phi_0$ is the output bias
-- $phi_1$, $\phi_2$, $\phi_3$ are the output weights
+- $\phi_0$ is the output bias
+- $\phi_1$, $\phi_2$, $\phi_3$ are the output weights
 - $\theta_{i0}$ are hidden layer biases
 - $\theta_{i1}$ are hidden layer weights
 - $a[\cdot]$ is the activation function
