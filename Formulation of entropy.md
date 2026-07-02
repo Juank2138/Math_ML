@@ -5,7 +5,7 @@ H(X) = - \sum_{i=1}^{n} \mathbb{P}(X=i) \log_2 \mathbb{P}(X=i)
 ```
 But let's look at the explanation of the previous equation.
 ## Amount of information related to an event
-Let X any event with probability $\mathbb{P}(X)$, we define the amount of the information of X as:
+Let $X$ any event with probability $\mathbb{P}(X)$, we define the amount of the information of $X$ as:
 ```math
 I(X)=\log_2 (\frac{1}{\mathbb{P}(X)})=-\log_2 \mathbb{P}(X)
 ```
@@ -35,8 +35,8 @@ If $\mathbb{P}(X)$ is large, then the amount of information is small. On the oth
 ## Definition of the entropy
 we can now define the information content of an entire random variable.
 Since a random variable may produce different outcomes with different probabilities, the amount of information obtained is itself a random quantity. Therefore, a natural measure of the uncertainty associated with the random variable is the expected amount of information produced by its outcomes.
-This expected information is called the entropy of the random variable X and is defined as
+This expected information is called the entropy of the random variable $X$ and is defined as
 ```math
 H(X)=\mathbb{E}[I(X)]=- \sum_{i=1}^{n} \mathbb{P}(X=i) I(X)= - \sum_{i=1}^{n} \mathbb{P}(X=i) \log_2 \mathbb{P}(X=i)
 ```
-Hence, entropy measures the average amount of information associated with the outcomes of the random variable X.
+Hence, entropy measures the average amount of information associated with the outcomes of the random variable $X$.
