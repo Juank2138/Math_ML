@@ -55,7 +55,7 @@ For any (\lambda > 0)
 ```
 Applying Markov's inequality to the exponential yields
 ```math
-\mathbb{P}(\sum_{i=1}^{n}(X_i-\mu_i)≥ t)≤e^{-\lambda t}\mathbb{E}[e^{\lambda\sum_{i=1}^{n}(X_i-\mu_i)}]
+\mathbb{P}\left(\sum_{i=1}^{n}(X_i-\mu_i)≥ t\right)≤e^{-\lambda t}\mathbb{E}[e^{\lambda\sum_{i=1}^{n}(X_i-\mu_i)}]
 ```
 Step 2: Use independence
 
