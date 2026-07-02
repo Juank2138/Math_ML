@@ -3,4 +3,9 @@ Concentration bounds are probabilistic inequalities that quantify how likely a r
 ## Markov's inequality
 Let X a continuos random variable and we know that its expected value is defined as:
 ```math
-\mathbb{E}
+\mathbb{E}[X]=\int_{0}^{\infty} Xf_{X}(X) dX
+```
+In addition, if we have a constant $\alpha > 0$. Then
+```
+\mathbb{E}[X]=\int_{0}^{\infty} Xf_{X}(X) dX \gcd \int_{\alpha}^{\infty} Xf_{X}(X) dX
+```
