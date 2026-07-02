@@ -30,12 +30,13 @@ If we have the inequality $\mathbb{P}(X≥\alpha)$, then $\mathbb{P}(X^{2}≥\al
 Taking the preceding statements into account, we can define the next probability such that:
 ```math
 \mathbb{P}((X-\mathbb{E}[X])^{2}≥\alpha^{2})
-```≤
+```
 Now, using Markov's inequality
 ```math
 \mathbb{P}((X-\mathbb{E}[X])^{2}≥\alpha^{2}) ≤ \frac{\mathbb{E}[(X-\mathbb{E}[X])^{2}]}{\alpha^{2}}
 ```
 We define the variance of a continuos random variable as $Var[X]=\mathbb{E}[(X-\mathbb{E}[X])^{2}]$. Then, we obtain Chebyshev's inequality such that
 ```math
-\mathbb{P}((X-\mathbb{E}[X])^{2}≥\alpha^{2}) ≤ \frac{Var[X]}{\alpha^{2}}
+\mathbb{P}(|(X-\mathbb{E}[X])|≥\alpha) ≤ \frac{Var[X]}{\alpha^{2}}
 ```
+## 
