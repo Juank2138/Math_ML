@@ -9,4 +9,15 @@ In addition, if we have a constant $\alpha > 0$. Then
 ```math
 \mathbb{E}[X]=\int_{0}^{\infty} Xf_{X}(X) dX >= \int_{\alpha}^{\infty} Xf_{X}(X) dX
 ```
-We notice that if we fixed X as X$\gcd$$\alpha$, then we always get the following inequality
+We observe that if we fix X as X>=$\alpha$, then we always get the following inequality
+```math
+\mathbb{E}[X] >= \int_{\alpha}^{\infty} \alpha f_{X}(X) dX
+```
+We can write the last inequality as
+```math
+\mathbb{E}[X] >= \int_{\alpha}^{\infty} \alpha f_{X}(X) dX = \alpha \int_{\alpha}^{\infty} f_{X}(X) dX = \alpha \mathbb{P}(X>=\alpha)
+```
+Finally, we obtain the Markov's inequality
+```math
+\frac{\mathbb{E}[X]}{\alpha} >= \mathbb{P}(X>=\alpha)
+```
