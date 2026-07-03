@@ -2,7 +2,7 @@
 
 The 'Netflix Prize' and the associated 'KDD Cup 2007 Task 1' focused on improving recommendation systems by predicting user preferences for movies. Competitors were asked to estimate whether a user would rate a particular movie based on historical rating information.
 
-One of the most successful approaches was presented in the *KDD Cup 2007 Task 1 Winner Report* by Miklós Kurucz and collaborators. Their solution combined several recommendation techniques, including matrix factorization methods and neighborhood-based models.
+One of the most successful approaches was presented in the 'KDD Cup 2007 Task 1 Winner Report' by Miklós Kurucz and collaborators. Their solution combined several recommendation techniques, including matrix factorization methods and neighborhood-based models.
  
 ## Problem Description
 The challenge consisted of predicting whether a user rated a movie during 2006 for a set of 100,000 user-movie pairs extracted from the Netflix Prize dataset.
