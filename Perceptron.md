@@ -2,9 +2,9 @@
 
 The perceptron is the simplest form of an artificial neural network and can be viewed as a linear classifier. Its prediction is based on four components:
 
-- An input vector \(\mathbf{x}\),
-- A weight vector \(\mathbf{w}\),
-- A bias term \(b\),
+- An input vector $\mathbf{x}$,
+- A weight vector $\mathbf{w}$,
+- A bias term $b$,
 - An activation function.
 
 The perceptron computes a linear score
