@@ -1,2 +1,2 @@
 # Math_ML
-This is a repository containing assignments for the "Mathematics of Machine Learning" course at the National University of Colombia.
+This is a repository containing assignments for the "Matematicas del Aprendizaje de Maquina" course at the Universidad Nacional de Colombia.
