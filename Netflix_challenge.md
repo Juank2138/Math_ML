@@ -22,7 +22,7 @@ The winning solution combined several complementary recommendation approaches.
 ### 1. SVD-Based Recommendation
 The first component relied on 'Singular Value Decomposition' (SVD) applied to the user-item interaction matrix. The matrix is approximated by a low-rank decomposition.
 
-According to the 'Eckart-Young theorem', this decomposition provides the best rank-$k$ approximation of the original matrix with respect to the Frobenius norm. Since the Frobenius norm corresponds to the sum of squared prediction errors, minimizing it is closely related to minimizing RMSE.
+According to the 'Eckart-Young theorem', this decomposition provides the best rank-k approximation of the original matrix with respect to the Frobenius norm. Since the Frobenius norm corresponds to the sum of squared prediction errors, minimizing it is closely related to minimizing RMSE.
 
 ### 2. Item-Item Collaborative Filtering
 The second component was based on 'item similarity'. Instead of factorizing the entire matrix, this approach predicts the preference for a movie by looking at similar movies that the user has already rated. Movie similarity was computed using the 'adjusted cosine similarity'
