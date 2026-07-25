@@ -4,10 +4,10 @@ The main idea behind the following experiment is to show that Hoeffding's inequa
   \mathbb{P}(|\nu-\mu| ≥ \epsilon) ≤ 2e^{-2N\epsilon^{2}}
 ```
 where
-*$\nu$ is the empirical mean 
-*$\mu$ is the expected mean of the variale
-*$N$ is the number of independent observations
-*$\epsilon$ is the maximum allowed deviation between the empirical and expected means
+* $\nu$ is the empirical mean 
+* $\mu$ is the expected mean of the variale
+* $N$ is the number of independent observations
+* $\epsilon$ is the maximum allowed deviation between the empirical and expected means
 
 In addition, this inequality holds only when certain assumptions are met, including that the random variable being analyzed is fixed before the observations are made.
 ## Description of the experiment
