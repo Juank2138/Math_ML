@@ -21,7 +21,7 @@ The procedure is as follows:
  * $C_{min}:$ the coin with the smallest fraction of heads (if several coins tie, choose the first one)
 4. For each selected coin, compute the fraction of heads
 ```math
-\nu=\frac{number of heads}{10}
+  \nu=\frac{number of heads}{10}
 ```​
 where $\nu$ represents the empirical probability of obtaining heads
 
@@ -30,7 +30,7 @@ According to the experiment, we have to answer the next points
 ### (a) What is $\mu$ for the three coins selected?
 Since all 1,000 coins are assumed to be fair, the probability of obtaining heads is
 ```math
-\mu=\mathbb{P}(heads)=0.5
+  \mu=\mathbb{P}(heads)=0.5
 ```
 Therefore, the expected value is the same for all three coins
 
