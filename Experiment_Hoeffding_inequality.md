@@ -25,8 +25,8 @@ The procedure is as follows:
 ```math
   \nu=\frac{\text{Number of Heads}}{10}
 ```
-​
-where $\nu$ represents the empirical probability of obtaining heads
+​where $\nu$ represents the empirical probability of obtaining heads.
+
 According to the experiment, we have to answer the next points
 
 ### (a) What is $\mu$ for the three coins selected?
