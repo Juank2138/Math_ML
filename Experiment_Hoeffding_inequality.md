@@ -10,6 +10,7 @@ where
 * $\epsilon$ is the maximum allowed deviation between the empirical and expected means
 
 In addition, this inequality holds only when certain assumptions are met, including that the random variable being analyzed is fixed before the observations are made.
+
 ## Description of the experiment
 The experiment consists of repeatedly flipping a large number of fair coins and comparing the empirical frequencies of three different coins. 
 The procedure is as follows:
@@ -20,11 +21,12 @@ The procedure is as follows:
 - $C_{rand}:$ a coin selected uniformly at random
 - $C_{min}:$ the coin with the smallest fraction of heads (if several coins tie, choose the first one)
 4. For each selected coin, compute the fraction of heads
+  
 ```math
   \nu=\frac{\text{Number of Heads}}{10}
-```​
+```
+​
 where $\nu$ represents the empirical probability of obtaining heads
-
 According to the experiment, we have to answer the next points
 
 ### (a) What is $\mu$ for the three coins selected?
