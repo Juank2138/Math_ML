@@ -16,9 +16,9 @@ The procedure is as follows:
 1. Consider 1,000 fair coins
 2. Flip each coin 10 independent times
 3. From the 1,000 coins, select the following three coins:
-* $C_1:$ the first coin
-* $C_{rand}:$ a coin selected uniformly at random
-* $C_{min}:$ the coin with the smallest fraction of heads (if several coins tie, choose the first one)
+ * $C_1:$ the first coin
+ * $C_{rand}:$ a coin selected uniformly at random
+ * $C_{min}:$ the coin with the smallest fraction of heads (if several coins tie, choose the first one)
 4. For each selected coin, compute the fraction of heads
 '''math
 \nu=\fracc{number of heads}{10}
@@ -41,7 +41,7 @@ We can define $\nu$ for each coin in the experiment such that
 * $\nu_{min}$ of the coin $C_{min}$
 
 we use the following code to simulate the experiment and find the results
-'''python
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -115,5 +115,5 @@ print("Average fraction of heads:")
 print(f"First coin   : {np.mean(v1):.4f}")
 print(f"Random coin  : {np.mean(vrand):.4f}")
 print(f"Minimum coin : {np.mean(vmin):.4f}")
-'''
+```
 If we run it, we get the values of the empirical risk of each coin and its histograms of distributions. Let's see the results of the experiment  
