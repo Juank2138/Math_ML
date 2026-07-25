@@ -1,3 +1,4 @@
+# Hoeffding's inequality and PAC
 We must consider Hoeffding's inequality defined such that
 ```math
   \mathbb{P}(|\nu-\mu| ≥ \epsilon) ≤ 2Me^{-2N\epsilon^{2}}
