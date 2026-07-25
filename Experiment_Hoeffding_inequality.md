@@ -20,12 +20,11 @@ The procedure is as follows:
 - $C_1:$ the first coin
 - $C_{rand}:$ a coin selected uniformly at random
 - $C_{min}:$ the coin with the smallest fraction of heads (if several coins tie, choose the first one)
-4. For each selected coin, compute the fraction of heads
+4. For each selected coin, compute the fraction of heads where $\nu$ represents the empirical probability of obtaining heads
   
 ```math
   \nu=\frac{\text{Number of Heads}}{10}
 ```
-​where $\nu$ represents the empirical probability of obtaining heads.
 
 According to the experiment, we have to answer the next points
 
