@@ -21,7 +21,7 @@ The procedure is as follows:
  * $C_{min}:$ the coin with the smallest fraction of heads (if several coins tie, choose the first one)
 4. For each selected coin, compute the fraction of heads
 '''math
-\nu=\fracc{number of heads}{10}
+\nu=\frac{number of heads}{10}
 '''​
 where $\nu$ represents the empirical probability of obtaining heads
 
