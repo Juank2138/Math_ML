@@ -117,3 +117,6 @@ print(f"Random coin  : {np.mean(vrand):.4f}")
 print(f"Minimum coin : {np.mean(vmin):.4f}")
 ```
 If we run it, we get the values of the empirical risk of each coin and its histograms of distributions. Let's see the results of the experiment  
+<p align="center">
+  <img width="829" height="305" alt="resultados" src="https://github.com/user-attachments/assets/4f5b02fb-7d3b-45dc-8d6a-794d7e0dc7ec" />
+</p>
