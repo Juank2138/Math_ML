@@ -122,4 +122,84 @@ If we run it, we get the values of the empirical risk of each coin and its histo
   <img width="829" height="305" alt="resultados" src="https://github.com/user-attachments/assets/4f5b02fb-7d3b-45dc-8d6a-794d7e0dc7ec" />
 </p>
 
-### (c) Estimate $\mathbb{P}(∣\nu−\mu∣>\epsilon)$, and plot the estimates along with Hoeffding's bound $2e^{−2\epsilon^{2}N} on the same graph
+### (c) Estimate $\mathbb{P}(∣\nu−\mu∣>\epsilon)$, and plot the estimates along with Hoeffding's bound $2e^{−2\epsilon^{2}N}$ on the same graph
+For several values of $\epsilon$, estimate experimentally the probability
+```math
+\mathbb{P}(∣\nu−mu∣≥\epsilon)
+```
+for each selected coin.
+
+Then compare the experimental probability with Hoeffding's bound
+```math
+\mathbb{P}(∣\nu−\mu∣>\epsilon)≤2e^{−2\epsilon^{2}N}
+```
+where $N=10$.
+
+Using the previos python code, we can make the comparison which shows whether the empirical results satisfy the theoretical bound. So, if we add some extra lines to the code such that
+```python
+#estimate P(|nu-mu|>=epsilon)
+MU = 0.5
+epsilons = np.linspace(0, 0.5, 101)
+
+p_v1 = []
+p_vrand = []
+p_vmin = []
+
+for eps in epsilons:
+    p_v1.append(np.mean(np.abs(v1 - MU) >= eps))
+    p_vrand.append(np.mean(np.abs(vrand - MU) >= eps))
+    p_vmin.append(np.mean(np.abs(vmin - MU) >= eps))
+
+p_v1 = np.array(p_v1)
+p_vrand = np.array(p_vrand)
+p_vmin = np.array(p_vmin)
+
+#Hoeffding bound
+hoeffding = 2 * np.exp(-2 * num_flips * epsilons**2)
+
+#plot Hoeffding comparison
+plt.figure(figsize=(8,6))
+
+plt.plot(
+    epsilons,
+    p_v1,
+    linewidth=2,
+    label=r"$\nu_1$"
+)
+
+plt.plot(
+    epsilons,
+    p_vrand,
+    linewidth=2,
+    label=r"$\nu_{rand}$"
+)
+
+plt.plot(
+    epsilons,
+    p_vmin,
+    linewidth=2,
+    label=r"$\nu_{min}$"
+)
+
+plt.plot(
+    epsilons,
+    hoeffding,
+    "k--",
+    linewidth=3,
+    label="Hoeffding Bound"
+)
+
+plt.xlabel(r"$\epsilon$", fontsize=12)
+plt.ylabel(r"$P(|\nu-\mu|>\epsilon)$", fontsize=12)
+plt.grid(True)
+plt.legend()
+
+plt.show()
+```
+We get the plot of the empirical results compared with the theoretical upper bound provided by Hoeffding's inequality.
+<p align="center">
+  <img width="442" height="322" alt="plot" src="https://github.com/user-attachments/assets/19152a95-fcff-440e-aee9-deafa9a2db93" />
+</p>
+
+### (d) Which coins satisfy Hoeffding's inequality?
+The results show that the curves corresponding to the first coin $C_1$ and the randomly selected coin $C_{rand}$ remain below Hoeffding's bound for all tested values of $\epsilon$, indicating that the inequality holds for these two coins. In contrast, the curve corresponding to the minimum coin $C_{min}$ exceeds the theoretical bound over part of the range of $\epsilon$. This occurs because $C_{min}$ is selected after observing the outcomes of all 1,000 coins, introducing a selection bias that violates the assumptions of Hoeffding's inequality.
