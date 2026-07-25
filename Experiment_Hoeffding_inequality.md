@@ -37,9 +37,9 @@ Therefore, the expected value is the same for all three coins
 
 ### (b) Perform the experiment independently 100,000 times
 We can define $\nu$ for each coin in the experiment such that
-* $\nu_{1}$ of the coin $C_1$
-* $\nu_{rand}$ of the coin $C_{rand}$
-* $\nu_{min}$ of the coin $C_{min}$
+* $\nu_{1}$ is the empirical mean of the coin $C_1$
+* $\nu_{rand}$ is the empirical mean of the coin $C_{rand}$
+* $\nu_{min}$ is the empirical mean of the coin $C_{min}$
 
 we use the following code to simulate the experiment and find the results
 ```python
@@ -121,3 +121,5 @@ If we run it, we get the values of the empirical risk of each coin and its histo
 <p align="center">
   <img width="829" height="305" alt="resultados" src="https://github.com/user-attachments/assets/4f5b02fb-7d3b-45dc-8d6a-794d7e0dc7ec" />
 </p>
+
+### (c) Estimate $\mathbb{P}(∣\nu−\mu∣>\epsilon)$, and plot the estimates along with Hoeffding's bound $2e^{−2\epsilon^{2}N} on the same graph
