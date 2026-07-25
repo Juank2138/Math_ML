@@ -16,9 +16,9 @@ The procedure is as follows:
 1. Consider 1,000 fair coins
 2. Flip each coin 10 independent times
 3. From the 1,000 coins, select the following three coins:
-*$C_1:$ the first coin
-*$C_{rand}:$ a coin selected uniformly at random
-*$C_{min}:$ the coin with the smallest fraction of heads (if several coins tie, choose the first one)
+* $C_1:$ the first coin
+* $C_{rand}:$ a coin selected uniformly at random
+* $C_{min}:$ the coin with the smallest fraction of heads (if several coins tie, choose the first one)
 4. For each selected coin, compute the fraction of heads
 '''math
 \nu=\fracc{number of heads}{10}
@@ -36,9 +36,9 @@ Therefore, the expected value is the same for all three coins
 
 ### (b) Perform the experiment independently 100,000 times
 We can define $\nu$ for each coin in the experiment such that
-*$\nu_{1}$ of the coin $C_1$
-*$\nu_{rand}$ of the coin $C_{rand}$
-*$\nu_{min}$ of the coin $C_{min}$
+* $\nu_{1}$ of the coin $C_1$
+* $\nu_{rand}$ of the coin $C_{rand}$
+* $\nu_{min}$ of the coin $C_{min}$
 
 we use the following code to simulate the experiment and find the results
 '''python
