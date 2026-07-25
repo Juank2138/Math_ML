@@ -16,9 +16,9 @@ The procedure is as follows:
 1. Consider 1,000 fair coins
 2. Flip each coin 10 independent times
 3. From the 1,000 coins, select the following three coins:
- * $C_1:$ the first coin
- * $C_{rand}:$ a coin selected uniformly at random
- * $C_{min}:$ the coin with the smallest fraction of heads (if several coins tie, choose the first one)
+- $C_1:$ the first coin
+- $C_{rand}:$ a coin selected uniformly at random
+- $C_{min}:$ the coin with the smallest fraction of heads (if several coins tie, choose the first one)
 4. For each selected coin, compute the fraction of heads
 ```math
   \nu=\frac{number of heads}{10}
