@@ -203,3 +203,8 @@ We get the plot of the empirical results compared with the theoretical upper bou
 
 ### (d) Which coins satisfy Hoeffding's inequality?
 The results show that the curves corresponding to the first coin $C_1$ and the randomly selected coin $C_{rand}$ remain below Hoeffding's bound for all tested values of $\epsilon$, indicating that the inequality holds for these two coins. In contrast, the curve corresponding to the minimum coin $C_{min}$ exceeds the theoretical bound over part of the range of $\epsilon$. This occurs because $C_{min}$ is selected after observing the outcomes of all 1,000 coins, introducing a selection bias that violates the assumptions of Hoeffding's inequality.
+
+### (e) Relate this experiment to the multiple bins problem
+This experiment illustrates the multiple bins (or multiple hypothesis) problem.
+
+Each coin can be viewed as a separate hypothesis. If only one predetermined coin is analyzed, Hoeffding's inequality provides a valid probabilistic guarantee. However, when many coins are examined simultaneously and the one with the most extreme outcome is selected, the probability of observing a large deviation increases significantly. This phenomenon is analogous to machine learning, where many hypotheses are evaluated and the one with the lowest training error is selected. The selected hypothesis may appear to perform exceptionally well simply due to random chance, rather than because it truly generalizes better.
