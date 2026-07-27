@@ -32,13 +32,13 @@ Among all separating hyperplanes, the SVM selects the one that maximizes the geo
 
 The geometric margin is
 ```math
-\gamma=\frac{2}{\|w\|}
+\gamma=\frac{2}{||w||}
 ```
-where $|\cdot|$ denotes the Euclidean norm. Since the margin is inversely proportional to the norm of the weight vector, maximizing the margin is equivalent to minimizing
+where $||\cdot||$ denotes the Euclidean norm. Since the margin is inversely proportional to the norm of the weight vector, maximizing the margin is equivalent to minimizing
 ```math
-\|w\|
+||w||
 ```
-Because the Euclidean norm is always non-negative and the function $x^2$ is strictly increasing for $x\ge0$, minimizing $|w|$ is equivalent to minimizing $|w|^2$. Therefore, the optimization problem is commonly written using the squared norm, as it leads to a simpler mathematical formulation while preserving the same optimal solution.
+Because the Euclidean norm is always non-negative and the function $x^2$ is strictly increasing for $x\ge0$, minimizing $||w||$ is equivalent to minimizing $||w||^2$. Therefore, the optimization problem is commonly written using the squared norm, as it leads to a simpler mathematical formulation while preserving the same optimal solution.
 
 The closest samples to the separating hyperplane are called support vectors since they completely determine the optimal classifier.
 
