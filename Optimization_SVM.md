@@ -10,8 +10,8 @@ The intuition behind SVM is that a classifier with a larger margin tends to gene
 ```
 where
 
-- \(x_i\in\mathbb{R}^d\) is the feature vector
-- \(y_i\in\{-1,+1\}\) is the class label
+- $\(x_i\in\mathbb{R}^d\)$ is the feature vector
+- $\(y_i\in\{-1,+1\}\)$ is the class label
 
 the separating hyperplane is defined by
 ```math
@@ -24,7 +24,7 @@ where
 
 A new sample \(x\) is classified according to
 ```math
-\hat{y}=\operatorname{sign}(w^Tx+b)
+\hat{y}=sign(w^Tx+b)
 ```
 
 # Maximum Margin Principle
