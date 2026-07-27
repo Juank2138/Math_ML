@@ -70,7 +70,7 @@ The Lagrangian is
 ```math
 L(w,b,\alpha)
 =
-\frac12\|\|w\|\|^2
+\frac12\|w\|^2
 -
 \sum_{i=1}^{N}
 \alpha_i
