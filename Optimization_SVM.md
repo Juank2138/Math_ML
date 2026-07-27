@@ -10,8 +10,8 @@ The intuition behind SVM is that a classifier with a larger margin tends to gene
 ```
 where
 
-- $\(x_i\in\mathbb{R}^d\)$ is the feature vector
-- $\(y_i\in\{-1,+1\}\)$ is the class label
+- $x_i\in\mathbb{R}^d$ is the feature vector
+- $y_i\in\{-1,+1\}$ is the class label
 
 the separating hyperplane is defined by
 ```math
@@ -19,10 +19,10 @@ w^Tx+b=0
 ```
 where
 
-- \(w\) is the weight vector
-- \(b\) is the bias
+- w is the weight vector
+- b is the bias
 
-A new sample \(x\) is classified according to
+A new sample x is classified according to
 ```math
 \hat{y}=sign(w^Tx+b)
 ```
@@ -34,16 +34,16 @@ The geometric margin is
 ```math
 \gamma=\frac{2}{\|w\|}
 ```
-where $\(\|\cdot\|\)$ denotes the Euclidean norm. Since the margin is inversely proportional to the norm of the weight vector, maximizing the margin is equivalent to minimizing
+where $|\cdot|$ denotes the Euclidean norm. Since the margin is inversely proportional to the norm of the weight vector, maximizing the margin is equivalent to minimizing
 ```math
 \|w\|
 ```
-Because the Euclidean norm is always non-negative and the function $\(x^2\)$ is strictly increasing for $\(x\ge0\)$, minimizing $\(\|w\|\)$ is equivalent to minimizing $\(\|w\|^2\)$. Therefore, the optimization problem is commonly written using the squared norm, as it leads to a simpler mathematical formulation while preserving the same optimal solution.
+Because the Euclidean norm is always non-negative and the function $x^2$ is strictly increasing for $x\ge0$, minimizing $|w|$ is equivalent to minimizing $|w|^2$. Therefore, the optimization problem is commonly written using the squared norm, as it leads to a simpler mathematical formulation while preserving the same optimal solution.
 
 The closest samples to the separating hyperplane are called support vectors since they completely determine the optimal classifier.
 
 # Optimization Problem
-Assuming that the training data are perfectly linearly separable (Hard-Margin SVM), the optimization problem is formulated as
+Assuming that the training data are perfectly linearly separable, the optimization problem is formulated as
 ```math
 \boxed{
 \begin{aligned}
@@ -56,10 +56,10 @@ y_i(w^Tx_i+b)\ge1,
 ```
 where
 
-- \(w\) is the weight vector
-- \(b\) is the bias
+- w is the weight vector
+- b is the bias
 
-The objective minimizes the squared Euclidean norm of the weight vector, which is equivalent to maximizing the geometric margin. The factor \(\frac12\) is included only for mathematical convenience, since it simplifies the derivatives without changing the location of the optimum.
+The objective minimizes the squared Euclidean norm of the weight vector, which is equivalent to maximizing the geometric margin. The factor $\frac12$ is included only for mathematical convenience, since it simplifies the derivatives without changing the location of the optimum.
 
 The constraints ensure that every training sample is correctly classified and lies on the correct side of the margin.
 
@@ -85,7 +85,7 @@ g(\alpha)
 \inf_{w,b}
 L(w,b,\alpha)
 ```
-where the infimum is taken over the primal variables \(w\) and \(b\).
+where the infimum is taken over the primal variables w and b.
 
 The corresponding dual optimization problem is
 ```math
@@ -94,7 +94,7 @@ g(\alpha)
 ```
 Rather than solving the original constrained problem directly, the dual formulation provides an equivalent optimization problem whose solution satisfies the same optimality conditions. Moreover, the dual formulation reveals that only a subset of the training samples influences the final classifier.
 
-# Karush-Kuhn-Tucker (KKT) Conditions
+# Karush-Kuhn-Tucker Conditions
 The optimal solution must satisfy the Karush-Kuhn-Tucker (KKT) conditions.
 
 ### 1. Primal Feasibility
@@ -114,7 +114,7 @@ The Lagrange multipliers must satisfy
 ### 3. Stationarity
 The gradient of the Lagrangian with respect to the primal variables must vanish.
 
-Differentiating with respect to \(w\)
+Differentiating with respect to w
 ```math
 \nabla_wL
 =
@@ -129,7 +129,7 @@ w=
 \sum_{i=1}^{N}
 \alpha_i y_i x_i
 ```
-Differentiating with respect to \(b\)
+Differentiating with respect to b
 ```math
 \frac{\partial L}{\partial b}
 =
