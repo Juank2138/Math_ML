@@ -28,7 +28,7 @@ where
 - $b$ is the bias
 - $f(\cdot)$ is the step activation function
 
-A single perceptron creates only a linear decision boundary, while the XOR function is not linearly separable. Therefore, a single perceptron cannot correctly classify all XOR inputs. To model XOR, a **multilayer perceptron (MLP)** with one hidden layer is required.
+A single perceptron creates only a linear decision boundary, while the XOR function is not linearly separable. Therefore, a single perceptron cannot correctly classify all XOR inputs. To model XOR, a multilayer perceptron with one hidden layer is required.
 
 ## XOR Network Architecture
 The network consists of
@@ -57,11 +57,11 @@ The first hidden neuron computes
 H_1=x_1\land\neg x_2
 ```
 Weights and bias:
-\[
+```math
 w_1=1\qquad
 w_2=-1\qquad
 b=-0.5
-\]
+```
 Its output is
 ```math
 H_1=f(x_1-x_2-0.5)
