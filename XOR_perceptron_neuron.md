@@ -58,10 +58,9 @@ H_1=x_1\land\neg x_2
 ```
 Weights and bias:
 
-- w_1=1
-- w_2=-1
-- b=-0.5
-
+- $w_1$=1
+- $w_2$=-1
+- $b$=-0.5
 
 Its output is
 ```math
@@ -84,11 +83,9 @@ H_2=\neg x_1\land x_2
 ```
 Weights and bias:
 
-
-- w_1=-1
-- w_2=1
-- b=-0.5
-
+- $w_1$=-1
+- $w_2$=1
+- $b$=-0.5
 
 Its output is
 ```math
@@ -111,11 +108,9 @@ XOR = H_1 \lor H_2
 ```
 Weights and bias:
 
-
-- w_1=1
-- w_2=1
-- b=-0.5
-
+- $w_1$=1
+- $w_2$=1
+- $b$=-0.5
 
 The output is computed as
 ```math
