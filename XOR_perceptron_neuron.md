@@ -5,12 +5,15 @@ In the first place, it is necessary to understand how the XOR logic gate works. 
 The XOR logic gate outputs **1** if and only if its two inputs are different.
 
 ### Truth Table
+
+<div align="center">
 | x₁ | x₂ | XOR |
 |:--:|:--:|:---:|
 | 0 | 0 | 0 |
 | 0 | 1 | 1 |
 | 1 | 0 | 1 |
 | 1 | 1 | 0 |
+</div>
 
 The logical expression of XOR can be seen as
 ```math
@@ -69,12 +72,14 @@ H_1=f(x_1-x_2-0.5)
 
 #### Verification
 
+<div align="center">
 | x₁ | x₂ | z | H₁ |
 |:--:|:--:|:--:|:--:|
 |0|0|-0.5|0|
 |0|1|-1.5|0|
 |1|0|0.5|1|
 |1|1|-0.5|0|
+</div>
 
 # Hidden Perceptron 2
 The second hidden neuron computes
@@ -94,12 +99,14 @@ H_2=f(-x_1+x_2-0.5)
 
 #### Verification
 
+<div align="center">
 | x₁ | x₂ | z | H₂ |
 |:--:|:--:|:--:|:--:|
 |0|0|-0.5|0|
 |0|1|0.5|1|
 |1|0|-1.5|0|
 |1|1|-0.5|0|
+</div>
 
 # Output Perceptron
 The output neuron performs the logical OR of the hidden neurons,
@@ -119,11 +126,13 @@ y=f(H_1+H_2-0.5)
 
 # Complete Verification
 
+<div align="center">
 | x₁ | x₂ | H₁ | H₂ | Output |
 |:--:|:--:|:--:|:--:|:------:|
 |0|0|0|0|0|
 |0|1|0|1|1|
 |1|0|1|0|1|
 |1|1|0|0|0|
+</div>
 
 The final output exactly matches the XOR truth table.
