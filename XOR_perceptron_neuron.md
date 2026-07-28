@@ -57,11 +57,13 @@ The first hidden neuron computes
 H_1=x_1\land\neg x_2
 ```
 Weights and bias:
-```math
+
+\[
 w_1=1\qquad
 w_2=-1\qquad
 b=-0.5
-```
+\]
+
 Its output is
 ```math
 H_1=f(x_1-x_2-0.5)
@@ -80,13 +82,15 @@ H_1=f(x_1-x_2-0.5)
 The second hidden neuron computes
 ```math
 H_2=\neg x_1\land x_2
-```math
+```
 Weights and bias:
+
 \[
 w_1=-1\qquad
 w_2=1\qquad
 b=-0.5
 \]
+
 Its output is
 ```math
 H_2=f(-x_1+x_2-0.5)
